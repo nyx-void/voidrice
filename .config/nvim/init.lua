@@ -114,6 +114,12 @@ vim.api.nvim_set_keymap('n', 'S', ':%s//g<Left><Left>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>c', ':w! | !compiler "%:p"<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>p', ':!opout "%:p"<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-n>', ':vsplit <C-r>=expand("%:p:h").."/"<CR>', { noremap = true, silent = false })
+vim.api.nvim_set_keymap('n', '<S-n>', ':split <C-r>=expand("%:p:h").."/"<CR>', { noremap = true, silent = false })
+vim.api.nvim_set_keymap('n', '<S-h>', ':vertical resize +5<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<S-l>', ':vertical resize -5<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<S-k>', ':resize +5<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<S-j>', ':resize -5<CR>', { noremap = true, silent = true })
+
 vim.cmd('cabbrev w!! execute "silent! write !sudo tee % >/dev/null" <bar> edit!')
 
 -- Toggle hidden statusbar
